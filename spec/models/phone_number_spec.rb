@@ -8,4 +8,12 @@ RSpec.describe PhoneNumber do
       expect(phone_number.value).to eq('5558568075')
     end
   end
+
+  context 'phone number contains parentheses' do
+    it 'strips out the non-numeric characters' do
+      phone_number = PhoneNumber.new('(555) 856-8075')
+
+      expect(phone_number.value).to eq('5558568075')
+    end
+  end
 end
