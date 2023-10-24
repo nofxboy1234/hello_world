@@ -1,1 +1,4 @@
 Hello, world!
+
+<%= link_to 'greet', greet_path(@user.first_name, dog: 19)  %>
+<%= link_to 'greet', "/hello_world/#{@user.first_name}/greet?dog=19" %>
